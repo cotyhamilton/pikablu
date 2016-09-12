@@ -1,0 +1,248 @@
+body {
+    font-family: helvetica, sans-serif;
+    background-color: #eee;
+}
+.pokemon-search {
+    text-align: center;
+}
+input:focus {
+    outline: none;
+}
+#box {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    max-height: 85%;
+    margin: -.9em auto 0 auto;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    width: 220px;
+    z-index: 99;
+}
+#box ul {
+    list-style: none;
+    padding-left: 3px;
+}
+#box li {
+    border-bottom: 1px solid #efefef;
+    cursor: pointer;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+#box li:hover {
+    background-color: #efefef;
+}
+
+.flexbox-container {
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
+    min-height: 88px;
+    position: relative;
+    z-index: 1;
+}
+
+.flex-item {
+    margin: 10px 10px 10px 10px;
+    border-radius: 16px;
+}
+
+body {
+    background-color: #F8F8F8;
+}
+
+.type {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    cursor: pointer;
+    width: 86px;
+    height: 32px;
+    font-family: 'VT323';
+    font-size: 2em;
+    color: #f8f8f8;
+    text-align: center;
+    border-radius: 10px;
+    text-shadow: 2px 0 #666, 0 2px #666, 1px 0 black, 0 1px black;
+}
+
+.clear {
+    width: 60px;
+    text-align: center;
+    font-family: sans-serif;
+    cursor: pointer;
+    margin: auto;
+    background-color: #efefef;
+    border-radius: 10px;
+    color: black;
+}
+
+.board {
+    margin: auto;
+    font-family: 'VT323';
+}
+
+.bug {
+    background-color: #A8B820;
+    box-shadow: 0px 0, 0 -3px #D8E030, 0px 0, 0 3px #748B0F;
+}
+
+.dark {
+    background-color: #705848;
+    box-shadow: 0px 0, 0 -3px #A8A878, 0px 0, 0 3px #484038;
+}
+
+.dragon {
+    background-color: #6D37F2;
+    box-shadow: 0px 0, 0 -3px #B8A0F8, 0px 0, 0 3px #483890;
+}
+
+.electr {
+    background-color: #F6CE30;
+    box-shadow: 0px 0, 0 -3px #F8F878, 0px 0, 0 3px #B8A038;
+}
+
+.fairy {
+    background-color: #DEA5DE;
+    box-shadow: 0px 0, 0 -3px #F7DEF7, 0px 0, 0 3px #BD94C6;
+}
+
+.fight {
+    background-color: #C03028;
+    box-shadow: 0px 0, 0 -3px #F08030, 0px 0, 0 3px #484038;
+}
+
+.fire {
+    background-color: #F08030;
+    box-shadow: 0px 0, 0 -3px #F8D030, 0px 0, 0 3px #C03028;
+}
+
+.flying {
+    background-color: #A890F0;
+    box-shadow: 0px 0, 0 -3px #C8C0F8, 0px 0, 0 3px #705898;
+}
+
+.ghost {
+    background-color: #705898;
+    box-shadow: 0px 0, 0 -3px #A890F0, 0px 0, 0 3px #483850;
+}
+
+.grass {
+    background-color: #78C850;
+    box-shadow: 0px 0, 0 -3px #C0F860, 0px 0, 0 3px #588040;
+}
+
+.ground {
+    background-color: #E0C068;
+    box-shadow: 0px 0, 0 -3px #F8F878, 0px 0, 0 3px #886830;
+}
+
+.ice {
+    background-color: #98D8D8;
+    box-shadow: 0px 0, 0 -3px #D0F8E8, 0px 0, 0 3px #9090A0;
+}
+
+.normal {
+    background-color: #A8A878;
+    box-shadow: 0px 0, 0 -3px #D8D8C0, 0px 0, 0 3px #705848;
+}
+
+.poison {
+    background-color: #A040A0;
+    box-shadow: 0px 0, 0 -3px #D880B8, 0px 0, 0 3px #483850;
+}
+
+.psychc {
+    background-color: #F85888;
+    box-shadow: 0px 0, 0 -3px #F6BFAF, 0px 0, 0 3px #906060;
+}
+
+.rock {
+    background-color: #B8A038;
+    box-shadow: 0px 0, 0 -3px #E0C068, 0px 0, 0 3px #886830;
+}
+
+.steel {
+    background-color: #B8B8D0;
+    box-shadow: 0px 0, 0 -3px #D8D8C0, 0px 0, 0 3px #807870;
+}
+
+.water {
+    background-color: #6890F0;
+    box-shadow: 0px 0, 0 -3px #98D8D8, 0px 0, 0 3px #807870;
+}
+
+.poke-name {
+    font-family: helvetica, sans-serif;
+    text-align: center;
+}
+
+.board {
+    text-align: center;
+    margin: auto;
+}
+
+.active {
+    display: inline-block;
+    width: 86px;
+    height: 32px;
+    font-family: 'VT323';
+    font-size: 2em;
+    color: #f8f8f8;
+    text-align: center;
+    border-radius: 10px;
+    text-shadow: 2px 0 #666, 0 2px #666, 1px 0 black, 0 1px black;
+}
+
+.heading {
+    text-align: center;
+    align-content: space-around;
+}
+
+.sub {
+    display: flex;
+}
+
+.bottom {
+    font-family: helvetica, sans-serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+.good {
+    background-color: #d2f3b1;
+    width: 600px;
+}
+
+.bad {
+    background-color: #ffd4d4;
+    width: 600px;
+}
+
+.black {
+    height: 100;
+    background-color: #333333;
+    color: #efefef;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.black h2 {
+    padding-top: 5px;
+}
+
+.sub {
+    justify-content: center;
+}

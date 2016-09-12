@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pokemon Types</title>
+        <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+        <link type="text/css" rel="stylesheet" href="css/stylesheet.css" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/pokemon.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body>
+        <div class="pokemon-search">
+            <form onsubmit="return false">
+            <input type="text" id="search-field" placeholder="Enter Pokemon Name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+            <button type="submit" id="search-button">submit</button>
+            </form>
+        </div>
+        <div id="box"></div>
+        <div class="flexbox-container">
+            <div class="bug type">BUG</div>
+            <div class="dark type">DARK</div>
+            <div class="dragon type">DRAGON</div>
+            <div class="electr type">ELECTR</div>
+            <div class="fairy type">FAIRY</div>
+            <div class="fight type">FIGHT</div>
+            <div class="fire type">FIRE</div>
+            <div class="flying type">FLYING</div>
+            <div class="ghost type">GHOST</div>
+            <div class="grass type">GRASS</div>
+            <div class="ground type">GROUND</div>
+            <div class="ice type">ICE</div>
+            <div class="normal type">NORMAL</div>
+            <div class="poison type">POISON</div>
+            <div class="psychc type">PSYCHC</div>
+            <div class="rock type">ROCK</div>
+            <div class="steel type">STEEL</div>
+            <div class="water type">WATER</div>
+        </div>
+        <div class="clear">
+            <p>clear</p>
+        </div>
+        <h2 class="poke-name"></h2>
+        <div class="board">
+            <div class="type1 active type"></div>
+            <div class="type2 active type"></div>
+        </div>
+        <div class="bottom flexbox-container">
+            <div class="good flex-item">
+                <div class="heading"><h2 class="head-one"></h2><div class="sub-one flexbox-container"></div></div>
+                <div class="heading"><h2 class="head-two"></h2><div class="sub-two flexbox-container"></div></div>
+                <div class="heading black"><h2>IMMUNE TO</h2><div class="sub-three sub"></div></div>
+            </div>
+            <div class="bad flex-item">
+                <div class="heading"><h2 class="head-four"></h2><div class="sub-four flexbox-container"></div></div>
+                <div class="heading"><h2 class="head-five"></h2><div class="sub-five flexbox-container"></div></div>
+                <div class="heading black"><h2>CAN'T DAMAGE</h2><div class="sub-six sub"></div></div>
+            </div>
+        </div>
+        <script src="js/search.js"></script>
+    </body>
+</html>
