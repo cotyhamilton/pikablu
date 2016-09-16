@@ -1,4 +1,8 @@
-@import 'https://fonts.googleapis.com/css?family=VT323';
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,700';
+
+$font-stack: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$light-gray: #efefef;
+$dark-gray: #bbb;
 
 @mixin input-placeholder {
     &.placeholder { @content; }
@@ -22,7 +26,18 @@
           transition: $trans;
 }
 
+@mixin two-tone($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 50%, $bottom 50%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,$top), color-stop(50%,$bottom));
+    background: -webkit-linear-gradient(top,  $top 50%,$bottom 50%);
+    background: -o-linear-gradient(top,  $top 50%,$bottom 50%);
+    background: -ms-linear-gradient(top,  $top 50%,$bottom 50%);
+    background: linear-gradient(to bottom,  $top 50%,$bottom 50%);
+}
+
 @import "scss/normalize",
         "scss/layout",
         "scss/header",
-        "scss/types";
+        "scss/types",
+        "scss/queries";

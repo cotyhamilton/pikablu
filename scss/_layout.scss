@@ -1,12 +1,12 @@
 body {
-    background-color: #efefef;
+    background-color: $light-gray;
+    font-family: $font-stack;
+
 }
 
 .content {
     background-color: #fff;
     margin: 36px auto;
-    max-width: 700px;
-    min-height: 100%;
     padding: 20px 0 20px 0;
 }
 
@@ -25,4 +25,15 @@ body {
     justify-content: center;
     position: relative;
     z-index: 1;
+}
+
+.max-w {
+    max-width: 700px;
+}
+
+.start {
+    color: $dark-gray;
+    margin: auto;
+    padding: 0 20px;
+    text-align: center;
 }

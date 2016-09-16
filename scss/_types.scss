@@ -1,107 +1,86 @@
 .type {
-    margin-top: 6px;
-    margin-bottom: 6px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding-left: 3px;
-    padding-right: 3px;
-    cursor: pointer;
-    width: 86px;
-    height: 32px;
-    font-family: 'VT323';
-    font-size: 2em;
-    color: #f8f8f8;
-    text-align: center;
     border-radius: 10px;
-    text-shadow: 2px 0 #666, 0 2px #666, 1px 0 black, 0 1px black;
+    color: #f8f8f8;
+    cursor: pointer;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    height: 38px;
+    line-height: 1.9;
+    margin: 3px 5px;
+    padding: 0 3px;
+    text-align: center;
+    width: 86px;
 }
 
 .bug {
-    background-color: #A8B820;
-    box-shadow: 0px 0, 0 -3px #D8E030, 0px 0, 0 3px #748B0F;
+    @include two-tone(#A8B820, #748B0F);
 }
 
 .dark {
-    background-color: #705848;
-    box-shadow: 0px 0, 0 -3px #A8A878, 0px 0, 0 3px #484038;
+    @include two-tone(#705848, #484038);
 }
 
 .dragon {
-    background-color: #6D37F2;
-    box-shadow: 0px 0, 0 -3px #B8A0F8, 0px 0, 0 3px #483890;
+    @include two-tone( #6D37F2, #483890);
 }
 
 .electr {
-    background-color: #F6CE30;
-    box-shadow: 0px 0, 0 -3px #F8F878, 0px 0, 0 3px #B8A038;
+    @include two-tone( #F6CE30, #B8A038);
 }
 
 .fairy {
-    background-color: #DEA5DE;
-    box-shadow: 0px 0, 0 -3px #F7DEF7, 0px 0, 0 3px #BD94C6;
+    @include two-tone( #DEA5DE, #BD94C6);
 }
 
 .fight {
-    background-color: #C03028;
-    box-shadow: 0px 0, 0 -3px #F08030, 0px 0, 0 3px #484038;
+    @include two-tone( #C03028, #484038);
 }
 
 .fire {
-    background-color: #F08030;
-    box-shadow: 0px 0, 0 -3px #F8D030, 0px 0, 0 3px #C03028;
+    @include two-tone( #F08030, #C03028);
 }
 
 .flying {
-    background-color: #A890F0;
-    box-shadow: 0px 0, 0 -3px #C8C0F8, 0px 0, 0 3px #705898;
+    @include two-tone( #A890F0, #705898);
 }
 
 .ghost {
-    background-color: #705898;
-    box-shadow: 0px 0, 0 -3px #A890F0, 0px 0, 0 3px #483850;
+    @include two-tone( #705898, #483850);
 }
 
 .grass {
-    background-color: #78C850;
-    box-shadow: 0px 0, 0 -3px #C0F860, 0px 0, 0 3px #588040;
+    @include two-tone( #78C850, #588040);
 }
 
 .ground {
-    background-color: #E0C068;
-    box-shadow: 0px 0, 0 -3px #F8F878, 0px 0, 0 3px #886830;
+    @include two-tone( #E0C068, #886830);
 }
 
 .ice {
-    background-color: #98D8D8;
-    box-shadow: 0px 0, 0 -3px #D0F8E8, 0px 0, 0 3px #9090A0;
+    @include two-tone( #98D8D8, #9090A0);
 }
 
 .normal {
-    background-color: #A8A878;
-    box-shadow: 0px 0, 0 -3px #D8D8C0, 0px 0, 0 3px #705848;
+    @include two-tone( #A8A878, #705848);
 }
 
 .poison {
-    background-color: #A040A0;
-    box-shadow: 0px 0, 0 -3px #D880B8, 0px 0, 0 3px #483850;
+    @include two-tone( #A040A0, #483850);
 }
 
 .psychc {
-    background-color: #F85888;
-    box-shadow: 0px 0, 0 -3px #F6BFAF, 0px 0, 0 3px #906060;
+    @include two-tone( #F85888, #906060);
 }
 
 .rock {
-    background-color: #B8A038;
-    box-shadow: 0px 0, 0 -3px #E0C068, 0px 0, 0 3px #886830;
+    @include two-tone( #B8A038, #886830);
 }
 
 .steel {
-    background-color: #B8B8D0;
-    box-shadow: 0px 0, 0 -3px #D8D8C0, 0px 0, 0 3px #807870;
+    @include two-tone( #B8B8D0, #807870);
 }
 
 .water {
-    background-color: #6890F0;
-    box-shadow: 0px 0, 0 -3px #98D8D8, 0px 0, 0 3px #807870;
+    @include two-tone( #6890F0, #807870);
 }

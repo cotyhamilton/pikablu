@@ -7,12 +7,16 @@
 <body>
     <header class="pokemon-search">
         <form onsubmit="return false">
-            <input type="text" id="search-field" placeholder="Search Pokemon" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+            <input type="search" id="search-field" placeholder="Search Pokemon" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
             <button type="submit" id="search-button">submit</button>
         </form>
     </header>
+    <div class="results-container">
+        <div class="results">
+        </div>
+    </div>
     <div class="content">
-        <div class="flexbox type-marq">
+        <div class="flexbox type-marq max-w">
             <div class="bug type">BUG</div>
             <div class="dark type">DARK</div>
             <div class="dragon type">DRAGON</div>
@@ -32,6 +36,9 @@
             <div class="steel type">STEEL</div>
             <div class="water type">WATER</div>
         </div>
+    </div>
+    <div class="start max-w">
+        <p>SEARCH FOR A POKEMON OR CLICK ON A TYPE TO BEGIN</p>
     </div>
 </body>
 </html>
