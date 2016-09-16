@@ -16,6 +16,9 @@ form {
             color: #fff;
             opacity: .5;
         }
+        &:focus {
+            font-size: 1em;
+        }
     }
 }
 
