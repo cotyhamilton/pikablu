@@ -11,13 +11,9 @@ form {
     margin: 7px 0 0;
     text-align: center;
     input {
-        font-size: 1em;
         @include input-placeholder {
             color: #fff;
             opacity: .5;
-        }
-        &:focus {
-            font-size: 1em;
         }
     }
 }
@@ -26,13 +22,14 @@ input[type="text"] {
     background: url(assets/search.svg) no-repeat 10px 6px #2980B9;
     background-size: 16px 16px;
     border: 0 none;
-    font: 12px Arial,Helvetica,Sans-serif;
+    font: 16px Arial,Helvetica,Sans-serif;
     color: #fff;
     width: 150px;
     padding: 6px 15px 6px 35px;
     @include border-radius(12px);
     @include transition(all 0.7s ease 0s);
     &:focus {
+        font-size: 16px;
         outline: none;
         width: 80%;
     }
