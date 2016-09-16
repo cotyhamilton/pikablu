@@ -393,14 +393,14 @@ body {
 
 header {
   background-color: #3498DB;
-  height: 42px;
+  height: 44px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%; }
 
 form {
-  margin: 7px 0 0;
+  margin: 6px 0 0;
   text-align: center; }
   form input.placeholder {
     color: #fff;
