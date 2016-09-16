@@ -1,0 +1,39 @@
+header {
+    background-color: #3498DB;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+form {
+    margin: 7px 0 0;
+    text-align: center;
+    input {
+        @include input-placeholder {
+            color: #fff;
+            opacity: .5;
+        }
+    }
+}
+
+input[type="text"] {
+    background: url(assets/search.svg) no-repeat 10px 6px #2980B9;
+    background-size: 16px 16px;
+    border: 0 none;
+    font: 12px Arial,Helvetica,Sans-serif;
+    color: #fff;
+    width: 150px;
+    padding: 6px 15px 6px 35px;
+    @include border-radius(12px);
+    @include transition(all 0.7s ease 0s);
+    &:focus {
+        outline: none;
+        width: 80%;
+    }
+}
+
+button {
+    display: none;
+}

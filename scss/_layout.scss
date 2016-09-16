@@ -1,0 +1,28 @@
+body {
+    background-color: #efefef;
+}
+
+.content {
+    background-color: #fff;
+    margin: 36px auto;
+    max-width: 700px;
+    min-height: 100%;
+    padding: 20px 0 20px 0;
+}
+
+.flexbox {
+    margin: 0 auto;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
