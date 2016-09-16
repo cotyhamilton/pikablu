@@ -422,9 +422,9 @@ input[type="text"] {
   background: url(assets/search.svg) no-repeat 10px 6px #2980B9;
   background-size: 16px 16px;
   border: 0 none;
-  font: 12px Arial,Helvetica,Sans-serif;
+  font: 16px Arial,Helvetica,Sans-serif;
   color: #fff;
-  width: 150px;
+  width: 180px;
   padding: 6px 15px 6px 35px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -435,6 +435,7 @@ input[type="text"] {
   -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s; }
   input[type="text"]:focus {
+    font-size: 16px;
     outline: none;
     width: 80%; }
 
