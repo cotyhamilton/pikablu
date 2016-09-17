@@ -1,9 +1,4 @@
-.results-container,
-.results {
-    display: none;
-}
-
-.results-container {
+#results-container {
     position: absolute;
     background: rgba(0,0,0,0.6);
     height: 100%;
@@ -12,4 +7,9 @@
     right: 0;
     overflow: auto;
     z-index: 2;
+}
+
+#results-container,
+#results {
+    display: none;
 }
