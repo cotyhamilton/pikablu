@@ -393,7 +393,7 @@ body {
 .max-w {
   max-width: 700px; }
 
-.start {
+#start {
   color: #bbb;
   margin: auto;
   padding: 0 20px;
