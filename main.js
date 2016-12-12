@@ -98,6 +98,7 @@ function displayOperation(str) {
     opWindow.appendChild(newType);
     
     updateTypes();
+    displayClearButton();
 }
 
 
@@ -127,7 +128,20 @@ function click(el) {
     typeOne.defense = eval(typeOne.type).defense;
     displayOperation(typeOne.type);
     displayTypeOne(typeOne);
+    displayClearButton();
+    console.log("tried");
+
 }
+
+/* --- display clear button on type click --- */
+
+function displayClearButton() {
+    document.getElementById("clear").style.display = "block";
+}
+
+/* --- clear button click listener --- */
+
+document.getElementById("clear").addEventListener("click",clear);
 
 
 /* --- type click listener --- */
@@ -141,6 +155,7 @@ Array.from(types).forEach(function(el) {
 
 function clear() {
     if (document.getElementById("start")) {deleteStartMsg()};
+    document.getElementById("clear").style.display = "none";
     opWindow.innerHTML = "";
     typeOne.type = "";
     typeTwo.type = "";
@@ -240,20 +255,32 @@ function displayTypeOne(obj) {
     }
 
     if (superTo) {
-        opWindow.appendChild("<div id='super-to'></div>")
+        s = document.createElement("div");
+        s.id = "super-to";
+        opWindow.appendChild(s);
         sup = document.getElementById("super-to");
 
         superTo.forEach(function(el) {
-            sup.appendChild("<div class=" + el + " type>" + el.toUpperCase() + "</div>");
+            sc = document.createElement("div");
+            sc.className = el;
+            sc.className += " type";
+            sc.innerHTML = el.toUpperCase();
+            sup.appendChild(sc);
         })
     }
 
     if (halfFrom) {
-        opWindow.appendChild("<div id='half-from'></div>")
+        h = document.createElement("div");
+        h.id = "half-from";
+        opWindow.appendChild(h)
         half = document.getElementById("half-from");
 
-        superTo.forEach(function(el) {
-            sup.appendChild("<div class=" + el + " type>" + el.toUpperCase() + "</div>");
+        halfFrom.forEach(function(el) {
+            hc = document.createElement("div");
+            hc.className = el;
+            hc.className += " type";
+            hc.innerHTML = el.toUpperCase();
+            half.appendChild(hc);
         })
     }
 
