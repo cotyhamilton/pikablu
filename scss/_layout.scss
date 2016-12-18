@@ -28,6 +28,7 @@ body {
 }
 
 .max-w {
+    margin: auto;
     max-width: 700px;
 }
 
@@ -52,4 +53,10 @@ body {
         position: relative;
         top: 10px;
     }
+}
+
+p {
+    color: $dark-gray;
+    text-align: center;
+    width: 100%;
 }

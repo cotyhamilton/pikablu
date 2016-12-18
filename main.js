@@ -1,4 +1,6 @@
 var opWindow = document.getElementById("operation-window");
+var focal = document.getElementById("focal");
+var ops = document.getElementById("operations");
 var types = document.getElementsByClassName("type"),
     typeOne = {type: "", offense: [], defense: [], immunity: []},
     typeTwo = {type: "", offense: [], defense: [], immunity: []};
@@ -95,7 +97,7 @@ function displayOperation(str) {
     var newType = document.createElement("div");
     newType.classList.add(str, "type");
     newType.appendChild(document.createTextNode(str.toUpperCase()));
-    opWindow.appendChild(newType);
+    focal.appendChild(newType);
     
     updateTypes();
     displayClearButton();
@@ -156,7 +158,8 @@ Array.from(types).forEach(function(el) {
 function clear() {
     if (document.getElementById("start")) {deleteStartMsg()};
     document.getElementById("clear").style.display = "none";
-    opWindow.innerHTML = "";
+    focal.innerHTML = "";
+    ops.innerHTML = "";
     typeOne.type = "";
     typeTwo.type = "";
 }
@@ -255,34 +258,105 @@ function displayTypeOne(obj) {
     }
 
     if (superTo) {
-        s = document.createElement("div");
-        s.id = "super-to";
-        opWindow.appendChild(s);
-        sup = document.getElementById("super-to");
+        st = document.createElement("div");
+        st.id = "super-to";
+        st.className = "max-w flexbox";
+        ops.appendChild(st);
+        supTo = document.getElementById("super-to");
+        supTo.innerHTML = "<p>2X DAMAGE TO</p>";
 
         superTo.forEach(function(el) {
-            sc = document.createElement("div");
-            sc.className = el;
-            sc.className += " type";
-            sc.innerHTML = el.toUpperCase();
-            sup.appendChild(sc);
+            stc = document.createElement("div");
+            stc.className = el;
+            stc.className += " type";
+            stc.innerHTML = el.toUpperCase();
+            supTo.appendChild(stc);
         })
     }
 
     if (halfFrom) {
-        h = document.createElement("div");
-        h.id = "half-from";
-        opWindow.appendChild(h)
-        half = document.getElementById("half-from");
+        hf = document.createElement("div");
+        hf.id = "half-from";
+        hf.className = "max-w flexbox";
+        ops.appendChild(hf)
+        hafFr = document.getElementById("half-from");
+        hafFr.innerHTML = "<p>1/2X DAMAGE FROM</p>";
 
         halfFrom.forEach(function(el) {
-            hc = document.createElement("div");
-            hc.className = el;
-            hc.className += " type";
-            hc.innerHTML = el.toUpperCase();
-            half.appendChild(hc);
+            hfc = document.createElement("div");
+            hfc.className = el;
+            hfc.className += " type";
+            hfc.innerHTML = el.toUpperCase();
+            hafFr.appendChild(hfc);
+        })
+    }
+
+    if (zeroFrom) {
+        zf = document.createElement("div");
+        zf.id = "zero-from";
+        zf.className = "max-w flexbox";
+        ops.appendChild(zf)
+        zerFr = document.getElementById("zero-from");
+        zerFr.innerHTML = "<p>IMMUNE TO</p>";
+
+        zeroFrom.forEach(function(el) {
+            zfc = document.createElement("div");
+            zfc.className = el;
+            zfc.className += " type";
+            zfc.innerHTML = el.toUpperCase();
+            zerFr.appendChild(zfc);
         })
     }
 
 
+    if (superFrom) {
+        sf = document.createElement("div");
+        sf.id = "super-from";
+        sf.className = "max-w flexbox";
+        ops.appendChild(sf)
+        supFr = document.getElementById("super-from");
+        supFr.innerHTML = "<p>2X DAMAGE FROM</p>";
+
+        superFrom.forEach(function(el) {
+            sfc = document.createElement("div");
+            sfc.className = el;
+            sfc.className += " type";
+            sfc.innerHTML = el.toUpperCase();
+            supFr.appendChild(sfc);
+        })
+    }
+
+    if (halfTo) {
+        ht = document.createElement("div");
+        ht.id = "half-to";
+        ht.className = "max-w flexbox";
+        ops.appendChild(ht)
+        hafTo = document.getElementById("half-to");
+        hafTo.innerHTML = "<p>1/2X DAMAGE TO</p>";
+
+        halfTo.forEach(function(el) {
+            htc = document.createElement("div");
+            htc.className = el;
+            htc.className += " type";
+            htc.innerHTML = el.toUpperCase();
+            hafTo.appendChild(htc);
+        })
+    }
+
+    if (zeroTo) {
+        zt = document.createElement("div");
+        zt.id = "zero-to";
+        zt.className = "max-w flexbox";
+        ops.appendChild(zt)
+        zerTo = document.getElementById("zero-to");
+        zerTo.innerHTML = "<p>CAN'T DAMAGE</p>";
+
+        zeroTo.forEach(function(el) {
+            ztc = document.createElement("div");
+            ztc.className = el;
+            ztc.className += " type";
+            ztc.innerHTML = el.toUpperCase();
+            zerTo.appendChild(ztc);
+        })
+    }
 }
