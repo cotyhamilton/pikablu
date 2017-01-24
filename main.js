@@ -121,8 +121,9 @@ function click(el) {
         typeTwo.type = temp;
         typeTwo.offense = eval(typeTwo.type).offense;
         typeTwo.defense = eval(typeTwo.type).defense;
-        console.log(typeTwo);
+        ops.innerHTML = "";
         displayOperation(typeTwo.type);
+        displayTypeTwo(typeOne, typeTwo)
         return;
     }
     typeOne.type = temp;
@@ -131,7 +132,6 @@ function click(el) {
     displayOperation(typeOne.type);
     displayTypeOne(typeOne);
     displayClearButton();
-    console.log("tried");
 
 }
 
@@ -257,7 +257,7 @@ function displayTypeOne(obj) {
         }
     }
 
-    if (superTo) {
+    if (superTo.length) {
         st = document.createElement("div");
         st.id = "super-to";
         st.className = "max-w flexbox";
@@ -274,7 +274,7 @@ function displayTypeOne(obj) {
         })
     }
 
-    if (halfFrom) {
+    if (halfFrom.length) {
         hf = document.createElement("div");
         hf.id = "half-from";
         hf.className = "max-w flexbox";
@@ -291,7 +291,7 @@ function displayTypeOne(obj) {
         })
     }
 
-    if (zeroFrom) {
+    if (zeroFrom.length) {
         zf = document.createElement("div");
         zf.id = "zero-from";
         zf.className = "max-w flexbox";
@@ -309,7 +309,7 @@ function displayTypeOne(obj) {
     }
 
 
-    if (superFrom) {
+    if (superFrom.length) {
         sf = document.createElement("div");
         sf.id = "super-from";
         sf.className = "max-w flexbox";
@@ -326,7 +326,7 @@ function displayTypeOne(obj) {
         })
     }
 
-    if (halfTo) {
+    if (halfTo.length) {
         ht = document.createElement("div");
         ht.id = "half-to";
         ht.className = "max-w flexbox";
@@ -343,7 +343,7 @@ function displayTypeOne(obj) {
         })
     }
 
-    if (zeroTo) {
+    if (zeroTo.length) {
         zt = document.createElement("div");
         zt.id = "zero-to";
         zt.className = "max-w flexbox";
@@ -360,3 +360,130 @@ function displayTypeOne(obj) {
         })
     }
 }
+
+/* --- calculate defense --- */
+
+function displayTypeTwo(firstType, secondType) {
+        var newDefense = [],
+            quarterWeak = [],
+            halfWeak = [],
+            doubleWeak = [],
+            fourxWeak = [],
+            immun = [];
+        
+        for (var i = 0; i < 18; i++) {
+            newDefense.push(firstType.defense[i] * secondType.defense[i]);
+            
+            if (newDefense[i] == .25) {
+                quarterWeak.push(returnTypeName(i));
+            }
+            else if (newDefense[i] == .5) {
+                halfWeak.push(returnTypeName(i));
+            }
+            else if (newDefense[i] == 0) {
+                immun.push(returnTypeName(i));
+            }
+            else if (newDefense[i] == 2) {
+                doubleWeak.push(returnTypeName(i));
+            }
+            else if (newDefense[i] == 4) {
+                fourxWeak.push(returnTypeName(i));
+            }
+        }
+
+        if (quarterWeak.length) {
+            qw = document.createElement("div");
+            qw.id = "quarter-from";
+            qw.className = "max-w flexbox";
+            ops.appendChild(qw)
+            quarFr = document.getElementById("quarter-from");
+            quarFr.innerHTML = "<p>1/4X DAMAGE</p>";
+
+            quarterWeak.forEach(function(el) {
+                qwc = document.createElement("div");
+                qwc.className = el;
+                qwc.className += " type";
+                qwc.innerHTML = el.toUpperCase();
+                quarFr.appendChild(qwc);
+            })
+        }
+
+        if (halfWeak.length) {
+            hw = document.createElement("div");
+            hw.id = "half-from";
+            hw.className = "max-w flexbox";
+            ops.appendChild(hw)
+            halfFr = document.getElementById("half-from");
+            halfFr.innerHTML = "<p>1/2X DAMAGE</p>";
+
+            halfWeak.forEach(function(el) {
+                hwc = document.createElement("div");
+                hwc.className = el;
+                hwc.className += " type";
+                hwc.innerHTML = el.toUpperCase();
+                halfFr.appendChild(hwc);
+            })
+        }
+
+        if (doubleWeak.length) {
+            dw = document.createElement("div");
+            dw.id = "double-from";
+            dw.className = "max-w flexbox";
+            ops.appendChild(dw)
+            doubFr = document.getElementById("double-from");
+            doubFr.innerHTML = "<p>2X DAMAGE</p>";
+
+            doubleWeak.forEach(function(el) {
+                dwc = document.createElement("div");
+                dwc.className = el;
+                dwc.className += " type";
+                dwc.innerHTML = el.toUpperCase();
+                doubFr.appendChild(dwc);
+            })
+        }
+
+        if (fourxWeak.length) {
+            fw = document.createElement("div");
+            fw.id = "fourx-from";
+            fw.className = "max-w flexbox";
+            ops.appendChild(fw)
+            fourFr = document.getElementById("fourx-from");
+            fourFr.innerHTML = "<p>4X DAMAGE</p>";
+
+            fourxWeak.forEach(function(el) {
+                fwc = document.createElement("div");
+                fwc.className = el;
+                fwc.className += " type";
+                fwc.innerHTML = el.toUpperCase();
+                fourFr.appendChild(fwc);
+            })
+        }
+
+        if (immun.length) {
+            iw = document.createElement("div");
+            iw.id = "immune";
+            iw.className = "max-w flexbox";
+            ops.appendChild(iw)
+            immTo = document.getElementById("immune");
+            immTo.innerHTML = "<p>IMMUNE</p>";
+
+            immun.forEach(function(el) {
+                iwc = document.createElement("div");
+                iwc.className = el;
+                iwc.className += " type";
+                iwc.innerHTML = el.toUpperCase();
+                immTo.appendChild(iwc);
+            })
+        }
+
+
+
+
+
+
+
+
+
+
+
+    }
