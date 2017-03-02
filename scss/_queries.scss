@@ -13,3 +13,34 @@
 #results {
     display: none;
 }
+
+input:focus {
+    outline: none;
+}
+
+#search-results-box {
+    position: absolute;
+    background-color: #fff;
+    max-height: 100%;
+    margin: 2px auto 0 auto;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 3;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            /*border-bottom: 1px solid #efefef;*/
+            color: #888;
+            cursor: pointer;
+            letter-spacing: 1px;
+            padding: 20px 0 20px 20px;
+            /*text-transform: uppercase;*/
+            &:hover {
+                background-color: #efefef;
+            }
+        }
+    }
+}
